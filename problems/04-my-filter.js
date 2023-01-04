@@ -21,11 +21,18 @@ console.log(result2);      // ['choose', 'words', 'only']
 
 function myFilter(array, cb) {
     // Your code here
+    let arr2 = [];
+    for (let number of array) {
+        if (cb(number)) {
+            arr2.push(number);
+        }
+    }
+    return arr2;
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 try {
     module.exports = myFilter;
-} catch(e) {
+} catch (e) {
     return null;
 }
