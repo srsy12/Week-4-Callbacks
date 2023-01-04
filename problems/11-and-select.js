@@ -30,11 +30,24 @@ console.log(andSelect(['ants', 'APPLES', 'ART', 'BACON', 'arm'], isUpperCase,  s
 
 function andSelect(array, cb1, cb2) {
   // Your code here
+  let arr2 = [];
+  let arr3 = [];
+  for (let el of array) {
+    if (cb1(el)) {
+      arr2.push(el);
+    }
+  }
+  for (let el of arr2) {
+    if (cb2(el)) {
+      arr3.push(el);
+    }
+  }
+  return arr3;
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 try {
   module.exports = andSelect;
-} catch(e) {
+} catch (e) {
   return null;
 }

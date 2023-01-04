@@ -28,11 +28,18 @@ console.log(result4); // 0
 
 function count(array, cb) {
   // Your code here
+  let count = 0;
+  for (let el of array) {
+    if (cb(el)) {
+      count++;
+    }
+  }
+  return count;
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 try {
   module.exports = count;
-} catch(e) {
+} catch (e) {
   return null;
 }

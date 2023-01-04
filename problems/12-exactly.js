@@ -29,11 +29,22 @@ console.log(result4); // true
 
 function exactly(array, num, cb) {
   // Your code here
+  let arr2 = [];
+  for (let el of array) {
+    if (cb(el)) {
+      arr2.push(el);
+    }
+  }
+  if (arr2.length === num) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 try {
   module.exports = exactly;
-} catch(e) {
+} catch (e) {
   return null;
 }
