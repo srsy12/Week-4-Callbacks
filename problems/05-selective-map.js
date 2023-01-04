@@ -44,11 +44,20 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
 
 function selectiveMap(array, selector, mapper) {
     // Your code here
+    let arr2 = [];
+    for (let number of array) {
+        if (selector(number)) {
+            arr2.push(mapper(number));
+        } else {
+            arr2.push(number);
+        }
+    }
+    return arr2;
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 try {
     module.exports = selectiveMap;
-} catch(e) {
+} catch (e) {
     return null;
 }
