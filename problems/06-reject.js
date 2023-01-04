@@ -23,11 +23,18 @@ console.log(reject(['breadth', 'GRAPH', 'depth', 'height'], hasA)); // [ 'depth'
 
 function reject(array, cb) {
   // Your code here
+  let arr2 = [];
+  for (let el of array) {
+    if (!cb(el)) {
+      arr2.push(el);
+    }
+  }
+  return arr2;
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 try {
   module.exports = reject;
-} catch(e) {
+} catch (e) {
   return null;
 }
